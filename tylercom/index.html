@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYLERCOM | Shop</title>
+<link rel="stylesheet" href="./css/auth.css">
+<script>
+var storedTheme = localStorage.getItem("theme");
+document.documentElement.setAttribute("data-theme", storedTheme === "dark" ? "dark" : "light");
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header-content">
+        <button class="nav-button" id="nav-button" aria-label="Open menu" aria-expanded="false">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <h1>TYLERCOM</h1>
+    </div>
+
+    <div class="header-content">
+        <button id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        <button aria-label="Home"><i class="fa-solid fa-house"></i></button>
+        <button aria-label="Cart" onclick="window.location.href='cart.html'"><i class="fa-solid fa-cart-shopping"></i></button>
+    </div>
+</header>
+
+<nav id="nav-bar" class="nav-bar">
+    <div class="nav-header">
+        <div class="nav-header-first">
+            <a href="#">Sign in</a>
+            <button id="nav-close" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <h2>Browse Tyler</h2>
+    </div>
+    <hr>
+
+    <div class="nav-second">
+        <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+    </div>
+
+    <section class="nav-third">
+        <h2>Top category</h2>
+        <a href="#" data-category="smartphones">Mobile</a>
+        <a href="#" data-category="homeappliances">Home appliances</a>
+        <a href="#" data-category="accessories">Fashion</a>
+        <a href="#" data-category="laptops">Laptops</a>
+        <a href="#" data-category="vehicle">Vehicle</a>
+    </section>
+
+    <section class="nav-fourth">
+        <h2>Clothes</h2>
+        <a href="#" data-category="mens">Men</a>
+        <a href="#" data-category="womens">Women</a>
+        <a href="#" data-category="kids">Kids</a>
+    </section>
+
+    <section class="nav-fifth">
+        <h2>Offers</h2>
+        <a href="#" data-category="all">Grand sales</a>
+        <a href="#" data-category="all">Buy more, save more</a>
+    </section>
+</nav>
+
+<div id="nav-overlay" class="nav-overlay"></div>
+
+<main>
+    <section class="hero">
+        <h2><i>Welcome to</i> <span class="hero-brand">TYLER</span>.COM</h2>
+        <p>Explore new <span class="hero-strong">designs</span> and <span class="hero-strong">fashions</span></p>
+    </section>
+       <p id="greeting" class="greeting"></p>
+<div id="weather-suggestion" class="weather-suggestion"></div>
+    
+
+    <section class="search-bar">
+        <input type="text" id="search-input" placeholder="Search products">
+        <button id="search-button"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+    </section>
+
+    <section class="product-cards" id="product-cards" data-category="all-types"></section>
+ 
+
+</main>
+
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+:root {
+    --color-bg: #f4f2ee;
+    --color-bg-elevated: #ffffff;
+    --color-bg-muted: #e9e6df;
+    --color-header: #dcd8d0;
+    --color-border: #d8d3c9;
+    --color-text-primary: #201f1c;
+    --color-text-secondary: #6f6a61;
+    --color-accent: #48453d;
+    --color-accent-strong: #2a2823;
+    --color-danger: #b3392c;
+    --color-danger-strong: #8f2a20;
+    --shadow-soft: 0 2px 8px rgba(32, 31, 28, 0.08);
+}
+
+[data-theme="dark"] {
+    --color-bg: #171715;
+    --color-bg-elevated: #211f1c;
+    --color-bg-muted: #2a2824;
+    --color-header: #2b2926;
+    --color-border: #3a3733;
+    --color-text-primary: #efeee8;
+    --color-text-secondary: #a29c90;
+    --color-accent: #cdc6b6;
+    --color-accent-strong: #ece4d2;
+    --color-danger: #e2685a;
+    --color-danger-strong: #f08d80;
+    --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    padding-bottom: 40px;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.cart-header {
+    background-color: var(--color-header);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 24px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 30px;
+}
+
+.cart-header h1 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.cart-header button {
+    background: none;
+    border: none;
+    color: var(--color-text-primary);
+    font-size: 18px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+}
+
+.cart-header button:hover {
+    background-color: var(--color-bg-muted);
+}
+
+#cart-container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cart-card {
+    background: var(--color-bg-elevated);
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.cart-card img {
+    width: 130px;
+    height: 130px;
+    object-fit: contain;
+    background-color: var(--color-bg-muted);
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.cart-card h2 {
+    width: 200px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.cart-card p {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+}
+
+.increase,
+.decrease {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--color-accent);
+    color: var(--color-bg-elevated);
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.increase:hover,
+.decrease:hover {
+    background: var(--color-accent-strong);
+}
+
+.cart-card span {
+    display: inline-block;
+    width: 30px;
+    text-align: center;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.remove {
+    background: var(--color-danger);
+    color: #ffffff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.remove:hover {
+    background: var(--color-danger-strong);
+}
+
+#total {
+    width: 90%;
+    max-width: 1000px;
+    margin: 25px auto;
+    text-align: right;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+#clear-cart {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background: var(--color-accent);
+    color: var(--color-bg-elevated);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+#clear-cart:hover {
+    background: var(--color-accent-strong);
+}
+
+#cart-container .empty-state {
+    text-align: center;
+    padding: 60px 0;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+    }
+
+    .cart-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cart-card h2 {
+        width: auto;
+    }
+
+    .remove {
+        margin-left: 0;
+    }
+
+    #total {
+        text-align: center;
+    }
+}

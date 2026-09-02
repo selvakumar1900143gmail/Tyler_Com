@@ -1,0 +1,115 @@
+.auth-container {
+    width: 90%;
+    max-width: 420px;
+    margin: 40px auto;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: var(--color-bg-elevated);
+    padding: 24px;
+    border-radius: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.auth-form label {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin-top: 10px;
+}
+
+.auth-form input {
+    height: 40px;
+    border-radius: 6px;
+    border: 1px solid var(--color-border);
+    background-color: var(--color-bg);
+    color: var(--color-text-primary);
+    padding: 0 12px;
+}
+
+.auth-form button {
+    margin-top: 18px;
+    height: 42px;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--color-accent);
+    color: var(--color-bg-elevated);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.auth-form button:hover {
+    background-color: var(--color-accent-strong);
+}
+
+.auth-error {
+    color: var(--color-danger);
+    font-size: 13px;
+    min-height: 18px;
+}
+
+.auth-success {
+    color: #2e7d32;
+    font-size: 13px;
+    min-height: 18px;
+}
+
+.auth-switch,
+.auth-hint {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+}
+
+.admin-list-title {
+    margin: 24px 0 10px;
+    font-size: 16px;
+}
+
+.admin-product-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--color-bg-elevated);
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: var(--shadow-soft);
+}
+
+.admin-product-row img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    background: var(--color-bg-muted);
+    border-radius: 4px;
+}
+
+.admin-product-row div {
+    flex-grow: 1;
+}
+
+.greeting {
+    text-align: center;
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.weather-suggestion {
+    text-align: center;
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    min-height: 18px;
+}
+
+.order-status {
+    text-align: center;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 600;
+}

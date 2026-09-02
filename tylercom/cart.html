@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYLERCOM | Cart</title>
+<script>
+var storedTheme = localStorage.getItem("theme");
+document.documentElement.setAttribute("data-theme", storedTheme === "dark" ? "dark" : "light");
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/cart.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+</head>
+<body>
+
+<header class="cart-header">
+    <button id="back-to-shop" aria-label="Back to shop" onclick="window.location.href='index.html'">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h1>My Cart</h1>
+    <button id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+</header>
+
+<div id="cart-container"></div>
+
+<h2 id="total"></h2>
+
+<button id="clear-cart">Clear cart</button>
+<button id="checkout">Checkout</button>
+<p id="order-status" class="order-status"></p>
+
+<script type="module" src="js/cart.js"></script>
+</body>
+</html>

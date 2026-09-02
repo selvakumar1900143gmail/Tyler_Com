@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TYLERCOM | Sign in</title>
+<script>
+var storedTheme = localStorage.getItem("theme");
+document.documentElement.setAttribute("data-theme", storedTheme === "dark" ? "dark" : "light");
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+<header class="cart-header">
+    <button onclick="window.location.href='index.html'" aria-label="Back to shop">
+        <i class="fa-solid fa-arrow-left"></i>
+    </button>
+    <h1>Sign in</h1>
+    <span></span>
+</header>
+
+<div class="auth-container">
+    <form id="login-form" class="auth-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" required autocomplete="username">
+
+        <label for="password">Password</label>
+        <input type="password" id="password" required autocomplete="current-password">
+
+        <p id="login-error" class="auth-error"></p>
+
+        <button type="submit">Sign in</button>
+    </form>
+
+    <p class="auth-switch">Don't have an account? <a href="register.html">Register</a></p>
+    <p class="auth-hint">Admin demo login: <strong>admin</strong> / <strong>admin123</strong></p>
+</div>
+
+<script type="module" src="js/login.js"></script>
+</body>
+</html>
